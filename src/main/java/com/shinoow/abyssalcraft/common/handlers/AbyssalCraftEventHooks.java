@@ -16,7 +16,9 @@
 package com.shinoow.abyssalcraft.common.handlers;
 
 import net.minecraft.entity.IEntityLivingData;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityZombie;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.EnumDifficulty;
@@ -77,6 +79,10 @@ public class AbyssalCraftEventHooks {
 			}
 		}
 		if (event.entityLiving.isPotionActive(AbyssalCraft.Dplague)){
+			event.entityLiving.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(event.entityLiving.getEntityAttribute(SharedMonsterAttributes.attackDamage).getBaseValue() + 3.0D);
+			if(event.entityLiving instanceof EntityPlayer) {
+				((EntityPlayer)event.entityLiving).addExhaustion(0.025F * (float)(event.entityLiving.worldObj.rand.nextInt(3)+1));
+			}
 			if (event.entityLiving.worldObj.rand.nextInt(20) == 0) {
 				event.entityLiving.attackEntityFrom(DamageSource.magic, 1);
 				if (event.entityLiving instanceof DreadMob) {

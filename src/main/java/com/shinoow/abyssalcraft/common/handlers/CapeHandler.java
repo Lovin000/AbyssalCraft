@@ -64,7 +64,7 @@ public class CapeHandler {
 			break;
 		}
 
-		ThreadDownloadImageData object = new ThreadDownloadImageData(url, null, null);
+		ThreadDownloadImageData object = new ThreadDownloadImageData(null, url, null, null);
 		Minecraft.getMinecraft().renderEngine.loadTexture(new ResourceLocation("cloaks/" + username), object);
 	}
 

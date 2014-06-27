@@ -853,8 +853,8 @@ public class AbyssalCraft {
 		GameRegistry.registerTileEntity(TileEntityWhead.class, "tileEntityWhead");
 		GameRegistry.registerTileEntity(TileEntityOhead.class, "tileEntityOhead");
 
-		Cplague = new PotionCplague(32, false, 0).setIconIndex(0, 0).setPotionName("potion.Cplague");
-		Dplague = new PotionDplague(33, false, 0).setIconIndex(0, 0).setPotionName("potion.Dplague");
+		Cplague = new PotionCplague(32, false, 0x36A880).setIconIndex(1, 0).setPotionName("potion.Cplague");
+		Dplague = new PotionDplague(33, false, 0xE60000).setIconIndex(1, 0).setPotionName("potion.Dplague");
 
 		//Block Register
 		GameRegistry.registerBlock(Darkstone, "darkstone");
@@ -1063,6 +1063,7 @@ public class AbyssalCraft {
 		BiomeManager.warmBiomes.add(new BiomeEntry(AbyssalCraft.DarklandsPlains, 10));
 		BiomeManager.warmBiomes.add(new BiomeEntry(AbyssalCraft.DarklandsHills, 10));
 		BiomeManager.warmBiomes.add(new BiomeEntry(AbyssalCraft.DarklandsMountains, 10));
+		BiomeManager.warmBiomes.add(new BiomeEntry(AbyssalCraft.corswamp, 10));
 		BiomeManager.oceanBiomes.add(AbyssalCraft.corocean);
 
 		BiomeManager.addSpawnBiome(AbyssalCraft.Darklands);

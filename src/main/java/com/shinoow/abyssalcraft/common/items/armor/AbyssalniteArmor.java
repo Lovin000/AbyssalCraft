@@ -64,19 +64,15 @@ public class AbyssalniteArmor extends ItemArmor {
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemstack) {
 		if (itemstack.getItem() == AbyssalCraft.helmet)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), 200, 0));
-		}
-		if (itemstack.getItem() == AbyssalCraft.plate)
-		{
-
+			player.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), 20, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.legs)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 200, 0));
+			player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 20, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.boots)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 200, 0));
+			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 20, 0));
 		}
 	}
 }

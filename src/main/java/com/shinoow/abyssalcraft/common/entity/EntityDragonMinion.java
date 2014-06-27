@@ -286,8 +286,8 @@ public class EntityDragonMinion extends CoraliumMob implements IEntityMultiPart,
 					d9 = -50.0D;
 				}
 
-				Vec3 vec3 = worldObj.getWorldVec3Pool().getVecFromPool(targetX - posX, targetY - posY, targetZ - posZ).normalize();
-				Vec3 vec31 = worldObj.getWorldVec3Pool().getVecFromPool(MathHelper.sin(rotationYaw * (float)Math.PI / 180.0F), motionY, -MathHelper.cos(rotationYaw * (float)Math.PI / 180.0F)).normalize();
+				Vec3 vec3 = Vec3.createVectorHelper(targetX - posX, targetY - posY, targetZ - posZ).normalize();
+				Vec3 vec31 = Vec3.createVectorHelper(MathHelper.sin(rotationYaw * (float)Math.PI / 180.0F), motionY, -MathHelper.cos(rotationYaw * (float)Math.PI / 180.0F)).normalize();
 				float f4 = (float)(vec31.dotProduct(vec3) + 0.5D) / 1.5F;
 
 				if (f4 < 0.0F)
@@ -314,7 +314,7 @@ public class EntityDragonMinion extends CoraliumMob implements IEntityMultiPart,
 				moveEntity(motionX, motionY, motionZ);
 
 
-				Vec3 vec32 = worldObj.getWorldVec3Pool().getVecFromPool(motionX, motionY, motionZ).normalize();
+				Vec3 vec32 = Vec3.createVectorHelper(motionX, motionY, motionZ).normalize();
 				float f8 = (float)(vec32.dotProduct(vec31) + 1.0D) / 2.0F;
 				f8 = 0.8F + 0.15F * f8;
 				motionX *= f8;

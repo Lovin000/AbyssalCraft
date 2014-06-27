@@ -122,15 +122,15 @@ public class EntityODBMeteor extends Entity
 				++ticksInAir;
 			}
 
-			Vec3 vec3 = worldObj.getWorldVec3Pool().getVecFromPool(posX, posY, posZ);
-			Vec3 vec31 = worldObj.getWorldVec3Pool().getVecFromPool(posX + motionX, posY + motionY, posZ + motionZ);
+			Vec3 vec3 = Vec3.createVectorHelper(posX, posY, posZ);
+			Vec3 vec31 = Vec3.createVectorHelper(posX + motionX, posY + motionY, posZ + motionZ);
 			MovingObjectPosition movingobjectposition = worldObj.rayTraceBlocks(vec3, vec31);
-			vec3 = worldObj.getWorldVec3Pool().getVecFromPool(posX, posY, posZ);
-			vec31 = worldObj.getWorldVec3Pool().getVecFromPool(posX + motionX, posY + motionY, posZ + motionZ);
+			vec3 = Vec3.createVectorHelper(posX, posY, posZ);
+			vec31 = Vec3.createVectorHelper(posX + motionX, posY + motionY, posZ + motionZ);
 
 			if (movingobjectposition != null)
 			{
-				vec31 = worldObj.getWorldVec3Pool().getVecFromPool(movingobjectposition.hitVec.xCoord, movingobjectposition.hitVec.yCoord, movingobjectposition.hitVec.zCoord);
+				vec31 = Vec3.createVectorHelper(movingobjectposition.hitVec.xCoord, movingobjectposition.hitVec.yCoord, movingobjectposition.hitVec.zCoord);
 			}
 
 			Entity entity = null;

@@ -281,70 +281,70 @@ public class AbyssalCrafting {
 		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.CoraliumU, 1), AbyssalCraft.abyingot, AbyssalCraft.Cingot, AbyssalCraft.Cingot, AbyssalCraft.AbyssalniteU);
 
 		//Wood to Cobble Upgrade
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.stone_pickaxe, 1), Items.wooden_pickaxe, AbyssalCraft.CobbleU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.stone_axe, 1), Items.wooden_axe, AbyssalCraft.CobbleU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.stone_shovel, 1), Items.wooden_shovel, AbyssalCraft.CobbleU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.stone_sword, 1), Items.wooden_sword, AbyssalCraft.CobbleU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.stone_hoe, 1), Items.wooden_hoe, AbyssalCraft.CobbleU);
+		GameRegistry.addRecipe(new ItemStack(Items.stone_pickaxe, 1), new Object [] {"#", "@", '#', Items.wooden_pickaxe, '@', AbyssalCraft.CobbleU});
+		GameRegistry.addRecipe(new ItemStack(Items.stone_axe, 1), new Object [] {"#", "@", '#', Items.wooden_axe, '@', AbyssalCraft.CobbleU});
+		GameRegistry.addRecipe(new ItemStack(Items.stone_shovel, 1), new Object [] {"#", "@", '#', Items.wooden_shovel, '@', AbyssalCraft.CobbleU});
+		GameRegistry.addRecipe(new ItemStack(Items.stone_sword, 1), new Object [] {"#", "@", '#', Items.wooden_sword, '@', AbyssalCraft.CobbleU});
+		GameRegistry.addRecipe(new ItemStack(Items.stone_hoe, 1), new Object [] {"#", "@", '#', Items.wooden_hoe, '@', AbyssalCraft.CobbleU});
 
 		//Stone to Iron Upgrade
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_pickaxe), Items.stone_pickaxe, AbyssalCraft.IronU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_axe), Items.stone_axe, AbyssalCraft.IronU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_shovel), Items.stone_shovel, AbyssalCraft.IronU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_sword), Items.stone_sword, AbyssalCraft.IronU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_hoe), Items.stone_hoe, AbyssalCraft.IronU);
+		GameRegistry.addRecipe(new ItemStack(Items.iron_pickaxe, 1), new Object [] {"#", "@", '#', Items.stone_pickaxe, '@', AbyssalCraft.IronU});
+		GameRegistry.addRecipe(new ItemStack(Items.iron_axe, 1), new Object [] {"#", "@", '#', Items.stone_axe, '@', AbyssalCraft.IronU});
+		GameRegistry.addRecipe(new ItemStack(Items.iron_shovel, 1), new Object [] {"#", "@", '#', Items.stone_shovel, '@', AbyssalCraft.IronU});
+		GameRegistry.addRecipe(new ItemStack(Items.iron_sword, 1), new Object [] {"#", "@", '#', Items.stone_sword, '@', AbyssalCraft.IronU});
+		GameRegistry.addRecipe(new ItemStack(Items.iron_hoe, 1), new Object [] {"#", "@", '#', Items.stone_hoe, '@', AbyssalCraft.IronU});
 
 		//Iron to Gold Upgrade
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.golden_pickaxe), Items.iron_pickaxe, AbyssalCraft.GoldU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.golden_axe), Items.iron_axe, AbyssalCraft.GoldU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.golden_shovel), Items.iron_shovel, AbyssalCraft.GoldU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.golden_sword), Items.iron_sword, AbyssalCraft.GoldU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.golden_hoe), Items.iron_hoe, AbyssalCraft.GoldU);
+		GameRegistry.addRecipe(new ItemStack(Items.golden_pickaxe, 1), new Object [] {"#", "@", '#', Items.iron_pickaxe, '@', AbyssalCraft.GoldU});
+		GameRegistry.addRecipe(new ItemStack(Items.golden_axe, 1), new Object [] {"#", "@", '#', Items.iron_axe, '@', AbyssalCraft.GoldU});
+		GameRegistry.addRecipe(new ItemStack(Items.golden_shovel, 1), new Object [] {"#", "@", '#', Items.iron_shovel, '@', AbyssalCraft.GoldU});
+		GameRegistry.addRecipe(new ItemStack(Items.golden_sword, 1), new Object [] {"#", "@", '#', Items.iron_sword, '@', AbyssalCraft.GoldU});
+		GameRegistry.addRecipe(new ItemStack(Items.golden_hoe, 1), new Object [] {"#", "@", '#', Items.iron_hoe, '@', AbyssalCraft.GoldU});
 
 		//Gold to Diamond Upgrade
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond_pickaxe), Items.golden_pickaxe, AbyssalCraft.DiamondU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond_axe), Items.golden_axe, AbyssalCraft.DiamondU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond_shovel), Items.golden_shovel, AbyssalCraft.DiamondU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond_sword), Items.golden_sword, AbyssalCraft.DiamondU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond_hoe), Items.golden_hoe, AbyssalCraft.DiamondU);
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_pickaxe, 1), new Object [] {"#", "@", '#', Items.golden_pickaxe, '@', AbyssalCraft.DiamondU});
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_axe, 1), new Object [] {"#", "@", '#', Items.golden_axe, '@', AbyssalCraft.DiamondU});
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_shovel, 1), new Object [] {"#", "@", '#', Items.golden_shovel, '@', AbyssalCraft.DiamondU});
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_sword, 1), new Object [] {"#", "@", '#', Items.golden_sword, '@', AbyssalCraft.DiamondU});
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_hoe, 1), new Object [] {"#", "@", '#', Items.golden_hoe, '@', AbyssalCraft.DiamondU});
 
 		//Diamond to Abyssalnite Upgrade
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.pickaxeA), Items.diamond_pickaxe, AbyssalCraft.AbyssalniteU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.axeA), Items.diamond_axe, AbyssalCraft.AbyssalniteU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.shovelA), Items.diamond_shovel, AbyssalCraft.AbyssalniteU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.swordA), Items.diamond_sword, AbyssalCraft.AbyssalniteU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.hoeA), Items.diamond_hoe, AbyssalCraft.AbyssalniteU);
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.pickaxeA, 1), new Object [] {"#", "@", '#', Items.diamond_pickaxe, '@', AbyssalCraft.AbyssalniteU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.axeA, 1), new Object [] {"#", "@", '#', Items.diamond_axe, '@', AbyssalCraft.AbyssalniteU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.shovelA, 1), new Object [] {"#", "@", '#', Items.diamond_shovel, '@', AbyssalCraft.AbyssalniteU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.swordA, 1), new Object [] {"#", "@", '#', Items.diamond_sword, '@', AbyssalCraft.AbyssalniteU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.hoeA, 1), new Object [] {"#", "@", '#', Items.diamond_hoe, '@', AbyssalCraft.AbyssalniteU});
 
 		//Abyssalnite to Coralium Upgrade
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.Corpickaxe), AbyssalCraft.pickaxeA, AbyssalCraft.CoraliumU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.Coraxe), AbyssalCraft.axeA, AbyssalCraft.CoraliumU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.Corshovel), AbyssalCraft.shovelA, AbyssalCraft.CoraliumU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.Corsword), AbyssalCraft.swordA, AbyssalCraft.CoraliumU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.Corhoe), AbyssalCraft.hoeA, AbyssalCraft.CoraliumU);
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.Corpickaxe, 1), new Object [] {"#", "@", '#', AbyssalCraft.pickaxeA, '@', AbyssalCraft.CoraliumU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.Coraxe, 1), new Object [] {"#", "@", '#', AbyssalCraft.axeA, '@', AbyssalCraft.CoraliumU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.Corshovel, 1), new Object [] {"#", "@", '#', AbyssalCraft.shovelA, '@', AbyssalCraft.CoraliumU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.Corsword, 1), new Object [] {"#", "@", '#', AbyssalCraft.swordA, '@', AbyssalCraft.CoraliumU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.Corhoe, 1), new Object [] {"#", "@", '#', AbyssalCraft.hoeA, '@', AbyssalCraft.CoraliumU});
 
 		//Iron to Gold armor
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.golden_helmet), Items.iron_helmet, AbyssalCraft.GoldU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.golden_chestplate), Items.iron_chestplate, AbyssalCraft.GoldU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.golden_leggings), Items.iron_leggings, AbyssalCraft.GoldU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.golden_boots), Items.iron_boots, AbyssalCraft.GoldU);
+		GameRegistry.addRecipe(new ItemStack(Items.golden_helmet, 1), new Object [] {"#", "@", '#', Items.iron_helmet, '@', AbyssalCraft.GoldU});
+		GameRegistry.addRecipe(new ItemStack(Items.golden_chestplate, 1), new Object [] {"#", "@", '#', Items.iron_chestplate, '@', AbyssalCraft.GoldU});
+		GameRegistry.addRecipe(new ItemStack(Items.golden_leggings, 1), new Object [] {"#", "@", '#', Items.iron_leggings, '@', AbyssalCraft.GoldU});
+		GameRegistry.addRecipe(new ItemStack(Items.golden_boots, 1), new Object [] {"#", "@", '#', Items.iron_boots, '@', AbyssalCraft.GoldU});
 
 		//Gold to Diamond armor
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond_helmet), Items.golden_helmet, AbyssalCraft.DiamondU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond_chestplate), Items.golden_chestplate, AbyssalCraft.DiamondU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond_leggings), Items.golden_leggings, AbyssalCraft.DiamondU);
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond_boots), Items.golden_boots, AbyssalCraft.DiamondU);
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_helmet, 1), new Object [] {"#", "@", '#', Items.golden_helmet, '@', AbyssalCraft.DiamondU});
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_chestplate, 1), new Object [] {"#", "@", '#', Items.golden_chestplate, '@', AbyssalCraft.DiamondU});
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_leggings, 1), new Object [] {"#", "@", '#', Items.golden_leggings, '@', AbyssalCraft.DiamondU});
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_boots, 1), new Object [] {"#", "@", '#', Items.golden_boots, '@', AbyssalCraft.DiamondU});
 
 		//Diamond to Abyssalnite armor
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.helmet), Items.diamond_helmet, AbyssalCraft.AbyssalniteU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.plate), Items.diamond_chestplate, AbyssalCraft.AbyssalniteU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.legs), Items.diamond_leggings, AbyssalCraft.AbyssalniteU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.boots), Items.diamond_boots, AbyssalCraft.AbyssalniteU);
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.helmet, 1), new Object [] {"#", "@", '#', Items.diamond_helmet, '@', AbyssalCraft.AbyssalniteU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.plate, 1), new Object [] {"#", "@", '#', Items.diamond_chestplate, '@', AbyssalCraft.AbyssalniteU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.legs, 1), new Object [] {"#", "@", '#', Items.diamond_leggings, '@', AbyssalCraft.AbyssalniteU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.boots, 1), new Object [] {"#", "@", '#', Items.diamond_boots, '@', AbyssalCraft.AbyssalniteU});
 
 		//Abyssalnite to Coralium armor
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.Corhelmet), AbyssalCraft.helmet, AbyssalCraft.CoraliumU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.Corplate), AbyssalCraft.plate, AbyssalCraft.CoraliumU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.Corlegs), AbyssalCraft.legs, AbyssalCraft.CoraliumU);
-		GameRegistry.addShapelessRecipe(new ItemStack(AbyssalCraft.Corboots), AbyssalCraft.boots, AbyssalCraft.CoraliumU);
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.Corhelmet, 1), new Object [] {"#", "@", '#', AbyssalCraft.helmet, '@', AbyssalCraft.CoraliumU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.Corplate, 1), new Object [] {"#", "@", '#', AbyssalCraft.plate, '@', AbyssalCraft.CoraliumU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.Corlegs, 1), new Object [] {"#", "@", '#', AbyssalCraft.legs, '@', AbyssalCraft.CoraliumU});
+		GameRegistry.addRecipe(new ItemStack(AbyssalCraft.Corboots, 1), new Object [] {"#", "@", '#', AbyssalCraft.boots, '@', AbyssalCraft.CoraliumU});
 	}
 
 	private static void addItemSmelting(){

@@ -272,7 +272,7 @@ public class TileEntityCrate extends TileEntity implements IInventory
 		{
 			numUsingPlayers = 0;
 			f = 5.0F;
-			List list = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getAABBPool().getAABB(xCoord - f, yCoord - f, zCoord - f, xCoord + 1 + f, yCoord + 1 + f, zCoord + 1 + f));
+			List list = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(xCoord - f, yCoord - f, zCoord - f, xCoord + 1 + f, yCoord + 1 + f, zCoord + 1 + f));
 			Iterator iterator = list.iterator();
 
 			while (iterator.hasNext())

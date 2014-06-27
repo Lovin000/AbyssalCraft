@@ -69,13 +69,11 @@ public class DreadArmor extends ItemArmor {
 			player.addPotionEffect(new PotionEffect(Potion.nightVision.getId(), 260, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.plateD) {
-			player.addPotionEffect(new PotionEffect(Potion.fireResistance.getId(), 200, 3));
+			player.addPotionEffect(new PotionEffect(Potion.fireResistance.getId(), 20, 3));
 			List list = player.worldObj.getEntitiesWithinAABBExcludingEntity(player, player.boundingBox.expand(4D, 0.0D, 4D));
-
 			if (list != null) {
 				for (int k2 = 0; k2 < list.size(); k2++) {
 					Entity entity = (Entity)list.get(k2);
-
 					if (entity instanceof EntityLiving && !entity.isDead) {
 						entity.setFire(99);
 					}
@@ -86,10 +84,10 @@ public class DreadArmor extends ItemArmor {
 			}
 		}
 		if (itemstack.getItem() == AbyssalCraft.legsD) {
-			player.addPotionEffect(new PotionEffect(Potion.fireResistance.getId(), 200, 3));
+			player.addPotionEffect(new PotionEffect(Potion.fireResistance.getId(), 20, 3));
 		}
 		if (itemstack.getItem() == AbyssalCraft.bootsD) {
-			player.addPotionEffect(new PotionEffect(Potion.fireResistance.getId(), 200, 3));
+			player.addPotionEffect(new PotionEffect(Potion.fireResistance.getId(), 20, 3));
 		}
 	}
 }

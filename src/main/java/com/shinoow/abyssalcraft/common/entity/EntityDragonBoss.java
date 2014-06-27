@@ -99,12 +99,12 @@ public class EntityDragonBoss extends CoraliumMob implements IBossDisplayData, I
 		targetY = 100.0D;
 		ignoreFrustumCheck = true;
 	}
-	
+
 	@Override
 	public String getCommandSenderName()
-    {
-        return EnumChatFormatting.AQUA + StatCollector.translateToLocal("entity.abyssalcraft.dragonboss.name");
-    }
+	{
+		return EnumChatFormatting.AQUA + StatCollector.translateToLocal("entity.abyssalcraft.dragonboss.name");
+	}
 
 	@Override
 	protected void applyEntityAttributes()
@@ -233,6 +233,11 @@ public class EntityDragonBoss extends CoraliumMob implements IBossDisplayData, I
 					setPosition(d3, d0, d1);
 					setRotation(rotationYaw, rotationPitch);
 				}
+
+				for (int i = 0; i < 2; ++i)
+				{
+					ParticleEffects.spawnParticle("CorBlood", posX + (rand.nextDouble() - 0.5D) * width, posY + rand.nextDouble() * height - 0.25D, posZ + (rand.nextDouble() - 0.5D) * width, (rand.nextDouble() - 0.5D) * 2.0D, -rand.nextDouble(), (rand.nextDouble() - 0.5D) * 2.0D);
+				}
 			}
 			else
 			{
@@ -296,8 +301,8 @@ public class EntityDragonBoss extends CoraliumMob implements IBossDisplayData, I
 					d9 = -50.0D;
 				}
 
-				Vec3 vec3 = worldObj.getWorldVec3Pool().getVecFromPool(targetX - posX, targetY - posY, targetZ - posZ).normalize();
-				Vec3 vec31 = worldObj.getWorldVec3Pool().getVecFromPool(MathHelper.sin(rotationYaw * (float)Math.PI / 180.0F), motionY, -MathHelper.cos(rotationYaw * (float)Math.PI / 180.0F)).normalize();
+				Vec3 vec3 = Vec3.createVectorHelper(targetX - posX, targetY - posY, targetZ - posZ).normalize();
+				Vec3 vec31 = Vec3.createVectorHelper(MathHelper.sin(rotationYaw * (float)Math.PI / 180.0F), motionY, -MathHelper.cos(rotationYaw * (float)Math.PI / 180.0F)).normalize();
 				float f4 = (float)(vec31.dotProduct(vec3) + 0.5D) / 1.5F;
 
 				if (f4 < 0.0F)
@@ -324,17 +329,12 @@ public class EntityDragonBoss extends CoraliumMob implements IBossDisplayData, I
 				moveEntity(motionX, motionY, motionZ);
 
 
-				Vec3 vec32 = worldObj.getWorldVec3Pool().getVecFromPool(motionX, motionY, motionZ).normalize();
+				Vec3 vec32 = Vec3.createVectorHelper(motionX, motionY, motionZ).normalize();
 				float f8 = (float)(vec32.dotProduct(vec31) + 1.0D) / 2.0F;
 				f8 = 0.8F + 0.15F * f8;
 				motionX *= f8;
 				motionZ *= f8;
 				motionY *= 0.9100000262260437D;
-			}
-
-			for (int i = 0; i < 2; ++i)
-			{
-				ParticleEffects.spawnParticle("CorBlood", posX + (rand.nextDouble() - 0.5D) * width, posY + rand.nextDouble() * height - 0.25D, posZ + (rand.nextDouble() - 0.5D) * width, (rand.nextDouble() - 0.5D) * 2.0D, -rand.nextDouble(), (rand.nextDouble() - 0.5D) * 2.0D);
 			}
 
 			renderYawOffset = rotationYaw;

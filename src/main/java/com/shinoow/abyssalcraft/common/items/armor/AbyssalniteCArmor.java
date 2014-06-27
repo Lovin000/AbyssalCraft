@@ -64,22 +64,22 @@ public class AbyssalniteCArmor extends ItemArmor {
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemstack) {
 		if (itemstack.getItem() == AbyssalCraft.helmetC)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), 200, 1));
+			player.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), 20, 1));
 			player.addPotionEffect(new PotionEffect(Potion.nightVision.getId(), 260, 0));
-			player.addPotionEffect(new PotionEffect(Potion.field_76443_y.getId(), 200, 0));
+			player.addPotionEffect(new PotionEffect(Potion.field_76443_y.getId(), 20, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.plateC)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 200, 0));
-			player.addPotionEffect(new PotionEffect(Potion.fireResistance.getId(), 200, 0));
+			player.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 20, 0));
+			player.addPotionEffect(new PotionEffect(Potion.fireResistance.getId(), 20, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.legsC)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 200, 0));
+			player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 20, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.bootsC)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 200, 1));
+			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 20, 1));
 		}
 	}
 }

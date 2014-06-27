@@ -2,6 +2,9 @@ package com.shinoow.abyssalcraft.core.client.render;
 
 import static net.minecraftforge.client.IItemRenderer.ItemRenderType.EQUIPPED;
 import static net.minecraftforge.client.IItemRenderer.ItemRendererHelper.BLOCK_3D;
+
+import java.util.UUID;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.model.ModelBiped;
@@ -12,8 +15,11 @@ import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTUtil;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.StringUtils;
 import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.client.event.RenderPlayerEvent;
@@ -21,6 +27,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import org.lwjgl.opengl.GL11;
 
+import com.mojang.authlib.GameProfile;
 import com.shinoow.abyssalcraft.core.client.model.ModelStarSpawnPlayer;
 import com.shinoow.abyssalcraft.core.util.ItemList;
 
@@ -83,14 +90,23 @@ public class RenderPlayerAC extends RenderPlayer {
 			{
 				f1 = 1.0625F;
 				GL11.glScalef(f1, -f1, -f1);
-				String s = "";
+				GameProfile gameprofile = null;
 
-				if (itemstack.hasTagCompound() && itemstack.getTagCompound().hasKey("SkullOwner", 8))
+				if (itemstack.hasTagCompound())
 				{
-					s = itemstack.getTagCompound().getString("SkullOwner");
+					NBTTagCompound nbttagcompound = itemstack.getTagCompound();
+
+					if (nbttagcompound.hasKey("SkullOwner", 10))
+					{
+						gameprofile = NBTUtil.func_152459_a(nbttagcompound.getCompoundTag("SkullOwner"));
+					}
+					else if (nbttagcompound.hasKey("SkullOwner", 8) && !StringUtils.isNullOrEmpty(nbttagcompound.getString("SkullOwner")))
+					{
+						gameprofile = new GameProfile((UUID)null, nbttagcompound.getString("SkullOwner"));
+					}
 				}
 
-				TileEntitySkullRenderer.field_147536_b.func_147530_a(-0.5F, 0.0F, -0.5F, 1, 180.0F, itemstack.getItemDamage(), s);
+				TileEntitySkullRenderer.field_147536_b.func_152674_a(-0.5F, 0.0F, -0.5F, 1, 180.0F, itemstack.getItemDamage(), gameprofile);
 			}
 
 			GL11.glPopMatrix();
@@ -98,7 +114,7 @@ public class RenderPlayerAC extends RenderPlayer {
 
 		float f3;
 
-		if (par1AbstractClientPlayer.getCommandSenderName().equals("deadmau5") && par1AbstractClientPlayer.getTextureSkin().isTextureUploaded())
+		if (par1AbstractClientPlayer.getCommandSenderName().equals("deadmau5") && par1AbstractClientPlayer.func_152123_o())
 		{
 			this.bindTexture(par1AbstractClientPlayer.getLocationSkin());
 
@@ -140,7 +156,7 @@ public class RenderPlayerAC extends RenderPlayer {
 			}
 		}
 
-		boolean flag = par1AbstractClientPlayer.getTextureCape().isTextureUploaded();
+		boolean flag = par1AbstractClientPlayer.func_152122_n();
 		flag = event.renderCape && flag;
 		float f5;
 
