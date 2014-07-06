@@ -80,9 +80,4 @@ public class BiomeGenCorOcean extends BiomeGenBase {
 	{
 		return BiomeGenBase.TempCategory.OCEAN;
 	}
-
-	public void genTerrainBlocks(World par1World, Random par2Random, Block[] par3BlockArray, byte[] par4ByteArray, int par5, int par6, double par7)
-	{
-		super.genTerrainBlocks(par1World, par2Random, par3BlockArray, par4ByteArray, par5, par6, par7);
-	}
 }

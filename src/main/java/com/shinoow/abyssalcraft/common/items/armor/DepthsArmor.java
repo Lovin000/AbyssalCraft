@@ -64,21 +64,21 @@ public class DepthsArmor extends ItemArmor {
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemstack) {
 		if (itemstack.getItem() == AbyssalCraft.Depthshelmet)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), 20, 0));
+			player.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), 200, 0));
 			player.addPotionEffect(new PotionEffect(Potion.nightVision.getId(), 260, 0));
-			player.addPotionEffect(new PotionEffect(Potion.field_76443_y.getId(), 20, 0));
+			player.addPotionEffect(new PotionEffect(Potion.field_76443_y.getId(), 200, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.Depthsplate)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 20, 0));
+			player.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 200, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.Depthslegs)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.jump.getId(), 20, 1));
+			player.addPotionEffect(new PotionEffect(Potion.jump.getId(), 200, 1));
 		}
 		if (itemstack.getItem() == AbyssalCraft.Depthsboots)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 20, 0));
+			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 200, 0));
 		}
 	}
 }

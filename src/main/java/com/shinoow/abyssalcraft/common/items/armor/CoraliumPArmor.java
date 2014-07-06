@@ -17,6 +17,7 @@ package com.shinoow.abyssalcraft.common.items.armor;
 
 import java.util.List;
 
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -68,9 +69,6 @@ public class CoraliumPArmor extends ItemArmor {
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemstack) {
 		if (itemstack.getItem() == AbyssalCraft.CorhelmetP) {
 			player.addPotionEffect(new PotionEffect(Potion.nightVision.getId(), 260, 0));
-			if(player.getActivePotionEffect(AbyssalCraft.Cplague) !=null){
-				player.removePotionEffect(AbyssalCraft.Cplague.getId());
-			}
 		}
 		if (itemstack.getItem() == AbyssalCraft.CorplateP) {
 			List list = player.worldObj.getEntitiesWithinAABBExcludingEntity(player, player.boundingBox.expand(4D, 0.0D, 4D));
@@ -88,10 +86,12 @@ public class CoraliumPArmor extends ItemArmor {
 				}
 			}
 		}
-		if (itemstack.getItem() == AbyssalCraft.CorbootsP){
-			if(player.isInWater()){
-				player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 20, 2));
-				player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 20, 1));
+		if (itemstack.getItem() == AbyssalCraft.legsD){
+		}
+		if (itemstack.getItem() == AbyssalCraft.bootsD){
+			if(player.isInsideOfMaterial(Material.water )){
+				player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200, 2));
+				player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 200, 1));
 			}
 		}
 	}

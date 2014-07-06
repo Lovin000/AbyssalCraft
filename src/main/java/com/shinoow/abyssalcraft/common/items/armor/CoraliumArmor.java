@@ -64,20 +64,20 @@ public class CoraliumArmor extends ItemArmor {
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemstack) {
 		if (itemstack.getItem() == AbyssalCraft.Corhelmet)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), 20, 0));
+			player.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), 200, 0));
 			player.addPotionEffect(new PotionEffect(Potion.nightVision.getId(), 260, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.Corplate)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 20, 0));
+			player.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 200, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.Corlegs)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 20, 0));
+			player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 200, 0));
 		}
 		if (itemstack.getItem() == AbyssalCraft.Corboots)
 		{
-			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 20, 1));
+			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 200, 1));
 		}
 	}
 }

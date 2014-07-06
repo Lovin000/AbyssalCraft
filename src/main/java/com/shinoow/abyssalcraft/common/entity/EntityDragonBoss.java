@@ -99,12 +99,12 @@ public class EntityDragonBoss extends CoraliumMob implements IBossDisplayData, I
 		targetY = 100.0D;
 		ignoreFrustumCheck = true;
 	}
-
+	
 	@Override
 	public String getCommandSenderName()
-	{
-		return EnumChatFormatting.AQUA + StatCollector.translateToLocal("entity.abyssalcraft.dragonboss.name");
-	}
+    {
+        return EnumChatFormatting.AQUA + StatCollector.translateToLocal("entity.abyssalcraft.dragonboss.name");
+    }
 
 	@Override
 	protected void applyEntityAttributes()
@@ -233,11 +233,6 @@ public class EntityDragonBoss extends CoraliumMob implements IBossDisplayData, I
 					setPosition(d3, d0, d1);
 					setRotation(rotationYaw, rotationPitch);
 				}
-
-				for (int i = 0; i < 2; ++i)
-				{
-					ParticleEffects.spawnParticle("CorBlood", posX + (rand.nextDouble() - 0.5D) * width, posY + rand.nextDouble() * height - 0.25D, posZ + (rand.nextDouble() - 0.5D) * width, (rand.nextDouble() - 0.5D) * 2.0D, -rand.nextDouble(), (rand.nextDouble() - 0.5D) * 2.0D);
-				}
 			}
 			else
 			{
@@ -335,6 +330,11 @@ public class EntityDragonBoss extends CoraliumMob implements IBossDisplayData, I
 				motionX *= f8;
 				motionZ *= f8;
 				motionY *= 0.9100000262260437D;
+			}
+
+			for (int i = 0; i < 2; ++i)
+			{
+				ParticleEffects.spawnParticle("CorBlood", posX + (rand.nextDouble() - 0.5D) * width, posY + rand.nextDouble() * height - 0.25D, posZ + (rand.nextDouble() - 0.5D) * width, (rand.nextDouble() - 0.5D) * 2.0D, -rand.nextDouble(), (rand.nextDouble() - 0.5D) * 2.0D);
 			}
 
 			renderYawOffset = rotationYaw;

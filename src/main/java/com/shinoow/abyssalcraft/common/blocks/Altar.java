@@ -73,7 +73,7 @@ public class Altar extends BlockContainer {
 				par1World.spawnEntityInWorld(EntityDragonBoss);
 				par5EntityPlayer.addPotionEffect(new PotionEffect(AbyssalCraft.Cplague.id, 300));
 				par5EntityPlayer.addPotionEffect(new PotionEffect(Potion.confusion.id, 200));
-				removedByPlayer(par1World, par5EntityPlayer, par2, par3, par4, false);
+				removedByPlayer(par1World, par5EntityPlayer, par2, par3, par4);
 				par1World.spawnParticle("hugeexplosion", maxX, maxY, maxZ, 0.0D, 0.0D, 0.0D);
 				FMLClientHandler.instance().getClient().ingameGUI.getChatGUI().printChatMessage(new ChatComponentText("Asorah: Haha, foolish human, I AM UNLEASHED!"));
 				par5EntityPlayer.addStat(AbyssalCraft.summonAsorah, 1);
